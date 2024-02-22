@@ -1,10 +1,14 @@
-package jm.task.core.jdbc.service;
+package overridetech.jdbc.jpa.dao;
 
-import jm.task.core.jdbc.model.User;
+import overridetech.jdbc.jpa.model.User;
 
 import java.util.List;
 
-public class UserServiceImpl implements UserService {
+public class UserDaoJDBCImpl implements UserDao {
+    public UserDaoJDBCImpl() {
+
+    }
+
     public void createUsersTable() {
 
     }

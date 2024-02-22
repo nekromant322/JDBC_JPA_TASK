@@ -1,4 +1,4 @@
-package jm.task.core.jdbc.model;
+package overridetech.jdbc.jpa.model;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

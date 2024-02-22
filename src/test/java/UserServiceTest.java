@@ -1,6 +1,6 @@
-import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.service.UserService;
-import jm.task.core.jdbc.service.UserServiceImpl;
+import overridetech.jdbc.jpa.model.User;
+import overridetech.jdbc.jpa.service.UserService;
+import overridetech.jdbc.jpa.service.UserServiceImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -62,6 +62,11 @@ public class UserServiceTest {
             userService.createUsersTable();
             userService.saveUser(testName, testLastName, testAge);
             userService.removeUserById(1L);
+
+            List<User> userList = userService.getAllUsers();
+            if (userList.size() != 0) {
+                Assert.fail("Проверьте корректность работы метода удаления пользователя");
+            }
         } catch (Exception e) {
             Assert.fail("При тестировании удаления пользователя по id произошло исключение\n" + e);
         }

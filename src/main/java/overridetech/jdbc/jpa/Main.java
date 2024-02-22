@@ -1,4 +1,4 @@
-package jm.task.core.jdbc;
+package overridetech.jdbc.jpa;
 
 public class Main {
     public static void main(String[] args) {
